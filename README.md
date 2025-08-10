@@ -116,6 +116,21 @@ id_venta → venta(id_venta)
 id_producto → producto(id_producto)
 La clave primaria id_detalle diferencia cada línea de productos dentro de una venta. Las claves foráneas vinculan el detalle con la venta correspondiente y con el producto vendido.
 
+```
+
+### Scripts de la Base de Datos (Click en los siguientes enlaces):
+
+<br>
+
+- <a href="./base_datos.sql"> Creacion de la Base de Datos </a><br>
+
+---
+
+<br>
+
+## Autor: German M Vinisky
+
+### Comisión #81830 - CoderHouse
 
 
 
