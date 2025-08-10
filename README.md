@@ -50,5 +50,70 @@ Su propuesta de valor se basa en ofrecer al cliente una variedad de prendas adap
 El negocio genera ingresos principalmente a través de Ventas minoristas a clientes finales.
 Su rentabilidad depende de la gestión eficiente del stock, el control de costos y márgenes, y la rotación de inventario para adaptarse a la demanda del mercado y las tendencias de moda."
 
+### Descripcion de la Base de Datos
+
+<br>
+
+```sh
+Tabla: tipo_prenda
+Clave primaria: id_tipo_prenda (identificador único del tipo de prenda).
+No tiene claves foráneas.
+La clave primaria id_tipo_prenda se seleccionó para identificar de forma única cada tipo de prenda (camisa, pantalón, vestido, etc.), garantizando la unicidad de cada registro.
+
+Tabla: temporada
+Clave primaria: id_temporada (identificador único de la temporada).
+No tiene claves foráneas.
+La clave primaria id_temporada permite diferenciar cada temporada (verano, invierno, etc.) de forma única, evitando confusiones entre registros.
+
+Tabla: color
+Clave primaria: id_color (identificador único del color).
+No tiene claves foráneas.
+La clave primaria id_color permite asignar un color específico a los productos de forma unívoca, facilitando su referencia en otras tablas.
+
+Tabla: talle
+Clave primaria: id_talle (identificador único del talle).
+No tiene claves foráneas.
+La clave primaria id_talle se usa para distinguir cada talla (S, M, L, etc.) de manera única.
+
+Tabla: producto
+Clave primaria: id_producto (identificador único del producto).
+Claves foráneas:
+id_tipo_prenda → tipo_prenda(id_tipo_prenda)
+id_temporada → temporada(id_temporada)
+id_color → color(id_color)
+id_talle → talle(id_talle)
+La clave primaria id_producto identifica de forma única cada producto del catálogo. Las claves foráneas aseguran que el producto esté correctamente clasificado por tipo, temporada, color y talle.
+
+Tabla: cliente
+Clave primaria: id_cliente (identificador único del cliente).
+No tiene claves foráneas.
+La clave primaria id_cliente diferencia a cada cliente, asegurando que la información personal y de contacto no se confunda entre registros.
+
+Tabla: precio_producto
+Clave primaria: id_precio (identificador único del registro de precio).
+Clave foránea:
+id_producto → producto(id_producto)
+La clave primaria id_precio permite registrar distintos precios históricos para un mismo producto. La clave foránea asegura que el precio esté asociado a un producto existente.
+
+Tabla: costo_producto
+Clave primaria: id_costo (identificador único del registro de costo).
+Clave foránea:
+id_producto → producto(id_producto)
+La clave primaria id_costo permite guardar los costos de compra de cada producto a lo largo del tiempo. La clave foránea garantiza la relación con un producto válido.
+
+Tabla: venta
+Clave primaria: id_venta (identificador único de la venta).
+Clave foránea:
+id_cliente → cliente(id_cliente)
+La clave primaria id_venta identifica de manera única cada transacción de venta. La clave foránea garantiza que la venta esté asociada a un cliente registrado.
+
+Tabla: detalle_venta
+Clave primaria: id_detalle (identificador único del detalle de venta).
+Claves foráneas:
+id_venta → venta(id_venta)
+id_producto → producto(id_producto)
+La clave primaria id_detalle diferencia cada línea de productos dentro de una venta. Las claves foráneas vinculan el detalle con la venta correspondiente y con el producto vendido.
+
+
 
 
