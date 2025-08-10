@@ -20,9 +20,9 @@
 ## Introducción:
 
 ```sh
-"Como parte de la evolución de GV Indumentaria, surgió la necesidad de desarrollar un modelo dinámico capaz de responder de manera eficiente a las actividades diarias de la empresa.
-Contar con información organizada y de rápida consulta es clave para optimizar las ganancias y facilitar la toma de decisiones.
-En este proyecto se detallan los conceptos, criterios de diseño y decisiones técnicas que guiaron la creación de la base de datos, con el objetivo de mejorar la gestión y el acceso a la información.
+##Como parte de la evolución de GV Indumentaria, surgió la necesidad de desarrollar un modelo dinámico capaz de responder de manera eficiente a las actividades diarias de la empresa.
+##Contar con información organizada y de rápida consulta es clave para optimizar las ganancias y facilitar la toma de decisiones.
+##En este proyecto se detallan los conceptos, criterios de diseño y decisiones técnicas que guiaron la creación de la base de datos, con el objetivo de mejorar la gestión y el acceso a la información.
 
 ```
 ## Objetivos:
@@ -48,7 +48,6 @@ Contar con una base de datos sólida y bien estructurada se vuelve esencial para
 "GV Indumentaria se dedica a la comercialización de prendas de vestir, enfocándose en la compra de productos terminados para su posterior venta.
 Su propuesta de valor se basa en ofrecer al cliente una variedad de prendas adaptadas a diferentes temporadas, estilos y talles, manteniendo un equilibrio entre calidad, tendencia y precio competitivo.
 El negocio genera ingresos principalmente a través de Ventas minoristas a clientes finales.
-
 Su rentabilidad depende de la gestión eficiente del stock, el control de costos y márgenes, y la rotación de inventario para adaptarse a la demanda del mercado y las tendencias de moda.
 
 
