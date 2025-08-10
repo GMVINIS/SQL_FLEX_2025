@@ -124,6 +124,7 @@ La clave primaria id_detalle diferencia cada línea de productos dentro de una v
 
 - <a href="./base_datos.sql"> Creacion de la Base de Datos </a><br>
 - <a href="./ER_Diagrama.pdf"> Diagrama Entidad-Relacion </a><br>
+- <a href="./Insercion_Datos.sql"> Inserción de Datos </a><br>
 
 ---
 
