@@ -50,6 +50,8 @@ Su propuesta de valor se basa en ofrecer al cliente una variedad de prendas adap
 El negocio genera ingresos principalmente a través de Ventas minoristas a clientes finales.
 Su rentabilidad depende de la gestión eficiente del stock, el control de costos y márgenes, y la rotación de inventario para adaptarse a la demanda del mercado y las tendencias de moda."
 
+```
+
 ### Descripcion de la Base de Datos
 
 <br>
