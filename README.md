@@ -136,6 +136,15 @@ Columnas principales de la vista:
     descripcion_temporada: Temporada a la que pertenece el producto.
     descripcion_tipo_prenda: Tipo de prenda del producto.
 
+Vista: bajo_stock
+Objetivo: El objetivo de esta vista es identificar rápidamente los productos con bajo stock para tomar decisiones de reposición o ajuste en las ventas.
+Tablas que la componen:
+    Tabla producto: Proporciona la información necesaria del producto, incluyendo el identificador, nombre y cantidad en stock.
+Columnas principales de la vista:
+    id_producto: Identificador único del producto.
+    nombre_producto: Nombre del producto.
+    stock: Cantidad disponible actualmente en inventario.
+
 ```
 
 ### Scripts de la Base de Datos (Click en los siguientes enlaces):
