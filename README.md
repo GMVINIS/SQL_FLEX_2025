@@ -117,7 +117,7 @@ id_producto → producto(id_producto)
 La clave primaria id_detalle diferencia cada línea de productos dentro de una venta. Las claves foráneas vinculan el detalle con la venta correspondiente y con el producto vendido.
 
 ```
-### Descripcion de la Base de Datos
+### Descripcion de la vistas
 
 ```sh
 Vista: vista_producto
@@ -135,6 +135,8 @@ Columnas principales de la vista:
     descripcion_talle: Talle del producto.
     descripcion_temporada: Temporada a la que pertenece el producto.
     descripcion_tipo_prenda: Tipo de prenda del producto.
+
+```
 
 ### Scripts de la Base de Datos (Click en los siguientes enlaces):
 
