@@ -220,10 +220,21 @@ Objetivo: Facilitar la consulta del stock de un producto específico, permitiend
 Función: compras_cliente
 Descripción: Esta función recibe como parámetro el ID de un cliente y devuelve la cantidad total de compras (ventas) realizadas por ese cliente registradas en la tabla venta.
 Objetivo: Facilitar el seguimiento del historial de compras de cada cliente, permitiendo análisis de comportamiento, fidelización o generación de reportes de ventas por cliente.
+```
+### Listo de Store Procedures
 
+```sh
+Stored Procedure: sp_ventasproducto
+Descripción: Este procedimiento recibe como parámetro el ID de un producto y devuelve un listado de todas las ventas en las que ese producto ha sido vendido, incluyendo el nombre del producto, el ID de la venta, la fecha y la cantidad vendida en cada detalle de venta.
+Objetivo: Facilitar la consulta del historial de ventas de un producto específico, permitiendo analizar su desempeño, controlar inventario y generar reportes de ventas detallados.
+
+Stored Procedure: sp_InsertarEliminarclientes
+Descripción: Este procedimiento permite insertar un nuevo cliente o eliminar un cliente existente según el valor del parámetro p_operacion.
+    Si p_operacion = 'INSERT', inserta un nuevo cliente en la tabla cliente con los datos proporcionados (DNI, nombre, apellido, nacionalidad, email y fecha de nacimiento).
+    Si p_operacion = 'DELETE', elimina el cliente cuyo DNI coincida con el proporcionado.
+Objetivo: Centralizar y simplificar las operaciones de alta y baja de clientes en la base de datos, asegurando que estas acciones se realicen de manera controlada y consistente.
 
 ```
-
 ### Scripts de la Base de Datos (Click en los siguientes enlaces):
 
 <br>
