@@ -117,6 +117,24 @@ id_producto → producto(id_producto)
 La clave primaria id_detalle diferencia cada línea de productos dentro de una venta. Las claves foráneas vinculan el detalle con la venta correspondiente y con el producto vendido.
 
 ```
+### Descripcion de la Base de Datos
+
+```sh
+Vista: vista_producto
+Objetivo: El objetivo de esta vista es centralizar en una sola consulta los datos principales de cada producto para simplificar reportes, búsquedas y listados de inventario.
+Tablas que la componen:
+    Tabla producto: Contiene la información básica de los productos, como ID y nombre.
+    Tabla color: Aporta la descripción del color de cada producto.
+    Tabla talle: Permite obtener la descripción del talle asociado al producto.
+    Tabla temporada: Indica la temporada a la que corresponde el producto.
+    Tabla tipo_prenda: Define el tipo de prenda (ejemplo: remera, pantalón, campera).
+Columnas principales de la vista:
+    id_producto: Identificador único del producto.
+    nombre_producto: Nombre del producto.
+    descripcion_color: Color del producto.
+    descripcion_talle: Talle del producto.
+    descripcion_temporada: Temporada a la que pertenece el producto.
+    descripcion_tipo_prenda: Tipo de prenda del producto.
 
 ### Scripts de la Base de Datos (Click en los siguientes enlaces):
 
