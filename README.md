@@ -209,6 +209,20 @@ Columnas principales de la vista:
     fecha: Fecha en la que se realizó la venta.
     id_detalle: Identificador del detalle de venta (en esta vista será NULL para ventas sin detalle).
 ```
+### Listado de las funciones
+
+```sh
+
+Función: buscar_stock_por_producto
+Descripción: Esta función recibe como parámetro el ID de un producto y devuelve la cantidad de stock disponible de ese producto en la tabla producto.
+Objetivo: Facilitar la consulta del stock de un producto específico, permitiendo controlar inventarios y validar disponibilidad antes de realizar operaciones como ventas o reservas
+
+Función: compras_cliente
+Descripción: Esta función recibe como parámetro el ID de un cliente y devuelve la cantidad total de compras (ventas) realizadas por ese cliente registradas en la tabla venta.
+Objetivo: Facilitar el seguimiento del historial de compras de cada cliente, permitiendo análisis de comportamiento, fidelización o generación de reportes de ventas por cliente.
+
+
+```
 
 ### Scripts de la Base de Datos (Click en los siguientes enlaces):
 
