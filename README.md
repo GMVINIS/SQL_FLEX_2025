@@ -221,7 +221,7 @@ Función: compras_cliente
 Descripción: Esta función recibe como parámetro el ID de un cliente y devuelve la cantidad total de compras (ventas) realizadas por ese cliente registradas en la tabla venta.
 Objetivo: Facilitar el seguimiento del historial de compras de cada cliente, permitiendo análisis de comportamiento, fidelización o generación de reportes de ventas por cliente.
 ```
-### Listado de Store Procedures
+### Listado de los store procedures
 
 ```sh
 Stored Procedure: sp_ventasproducto
@@ -235,6 +235,25 @@ Descripción: Este procedimiento permite insertar un nuevo cliente o eliminar un
 Objetivo: Centralizar y simplificar las operaciones de alta y baja de clientes en la base de datos, asegurando que estas acciones se realicen de manera controlada y consistente.
 
 ```
+### Listado de los triggers
+```sh
+Trigger: tr_after_cliente_new
+Descripción: Este trigger se ejecuta automáticamente después de insertar un nuevo registro en la tabla cliente. Registra en la tabla log_cliente el usuario que realizó la acción, la fecha, la hora y un mensaje indicando que se ha ingresado un nuevo cliente con su ID correspondiente.
+Objetivo: Mantener un historial automático de auditoría sobre la creación de clientes, permitiendo rastrear quién y cuándo se realizaron inserciones en la tabla cliente.
+
+Trigger: tr_after_cliente_delete
+Descripción: Este trigger se ejecuta automáticamente después de eliminar un registro de la tabla cliente. Registra en la tabla log_cliente el usuario que realizó la acción, la fecha, la hora y un mensaje indicando que se ha eliminado un cliente con su ID correspondiente.
+Objetivo: Mantener un historial automático de auditoría sobre la eliminación de clientes, permitiendo rastrear quién y cuándo se realizaron borrados en la tabla cliente.
+
+Trigger: tr_before_detalle_venta_insert
+Descripción: Este trigger se ejecuta automáticamente antes de insertar un registro en la tabla detalle_venta.
+Verifica el stock disponible del producto que se intenta vender.
+Si el stock es insuficiente, genera un error (SIGNAL) impidiendo la inserción de la venta.
+Si hay stock suficiente,descuenta automáticamente la cantidad vendida del stock del producto.
+Objetivo: Garantizar que no se puedan registrar ventas con cantidades superiores al stock disponible, manteniendo la integridad del inventario y evitando errores en la gestión de productos.
+
+```
+
 ### Scripts de la Base de Datos (Click en los siguientes enlaces):
 
 <br>
