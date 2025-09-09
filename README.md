@@ -221,7 +221,7 @@ Función: compras_cliente
 Descripción: Esta función recibe como parámetro el ID de un cliente y devuelve la cantidad total de compras (ventas) realizadas por ese cliente registradas en la tabla venta.
 Objetivo: Facilitar el seguimiento del historial de compras de cada cliente, permitiendo análisis de comportamiento, fidelización o generación de reportes de ventas por cliente.
 ```
-### Listo de Store Procedures
+### Listado de Store Procedures
 
 ```sh
 Stored Procedure: sp_ventasproducto
