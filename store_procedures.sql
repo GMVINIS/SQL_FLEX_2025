@@ -1,6 +1,6 @@
 USE gv_indumentaria;
 
-# store procedure que da detalles de las ventas realizadas de  un producto en particular
+# Store procedure que da detalles de las ventas realizadas de  un producto en particular
 
 DROP PROCEDURE sp_ventasproducto;
 
@@ -24,7 +24,7 @@ END //
 
 DELIMITER ;
 
-#store procedure para crear o eliminar registro de la tabla clientes
+# Store procedure para crear o eliminar registros de la tabla clientes
 
 DROP PROCEDURE sp_InsertarEliminarclientes;
 

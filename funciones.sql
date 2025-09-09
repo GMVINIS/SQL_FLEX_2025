@@ -1,6 +1,6 @@
 USE gv_indumentaria;
 
-#Funcion para determinar cuanto stock hay de un producto determinado
+# Función para determinar cuanto stock hay de un producto determinado
 
 DROP FUNCTION buscar_stock_por_producto;
 
@@ -18,7 +18,7 @@ BEGIN
 END //
 DELIMITER ;
 
-#Funcion para determinar cuantas compras hizo un cliente
+# Función para determinar cuantas compras hizo un cliente
 
 DROP FUNCTION compras_cliente;
 

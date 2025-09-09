@@ -1,6 +1,6 @@
 USE gv_indumentaria;
 
-#creacion de la tabla para  trigger, almecena informacion de cambios en la tabla cliente
+# Creación de la tabla para  trigger, almecena información de cambios en la tabla cliente
 CREATE TABLE IF NOT EXISTS log_cliente (
     id INT AUTO_INCREMENT PRIMARY KEY,
     usuario VARCHAR(150) NOT NULL,
@@ -9,8 +9,8 @@ CREATE TABLE IF NOT EXISTS log_cliente (
     accion VARCHAR(150) NOT NULL
 );
 
-#creación de trigger para la tabla log cliente
-#almacen la información luego de ingresado un nuevo cliente
+# creación de trigger para la tabla log cliente
+# Almacena la información luego de ingresado un nuevo cliente
 
 DROP TRIGGER tr_after_cliente;
 
@@ -26,8 +26,8 @@ END//
 
 DELIMITER ;
 
-#creación de trigger para la tabla log cliente
-#almacen la información luego de eliminar un nuevo cliente
+# Creación de trigger para la tabla log cliente
+# Almacena la información luego de eliminar un nuevo cliente
 
 DELIMITER //
 CREATE TRIGGER tr_after_cliente_delete
@@ -42,7 +42,7 @@ END//
 DELIMITER ;
 
 
-#creación de trigger para validar el stock antes de crear vender un producto
+# Creación de trigger para validar el stock antes de crear vender un producto
 
 DELIMITER //
 CREATE TRIGGER tr_before_detalle_venta_insert
