@@ -52,7 +52,7 @@ Su rentabilidad depende de la gestión eficiente del stock, el control de costos
 
 ```
 
-### Descripcion de la Base de Datos
+### Descripción de la Base de Datos
 
 <br>
 
@@ -117,7 +117,7 @@ id_producto → producto(id_producto)
 La clave primaria id_detalle diferencia cada línea de productos dentro de una venta. Las claves foráneas vinculan el detalle con la venta correspondiente y con el producto vendido.
 
 ```
-### Descripcion de la vistas
+### Listado de las vistas
 
 ```sh
 Vista: vista_producto
