@@ -191,7 +191,7 @@ Tablas que la componen:
 ```sh
 
 Función: buscar_stock_por_producto
-Descripción: Esta función recibe como parámetro el ID de un producto y devuelve la cantidad de stock disponible de ese producto en la tabla producto.
+Descripción: Esta función recibe como parámetros el ID de un producto, ID de talle y ID color para luego devolver la cantidad de stock disponible de ese producto en la tabla producto.
 Objetivo: Facilitar la consulta del stock de un producto específico, permitiendo controlar inventarios y validar disponibilidad antes de realizar operaciones como ventas o reservas
 
 Función: compras_cliente
