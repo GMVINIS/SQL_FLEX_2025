@@ -28,27 +28,27 @@ En este proyecto se detallan los conceptos, criterios de diseño y decisiones t�
 ## Objetivos:
 
 ```sh
-"El objetivo principal de esta base de datos es estructurar de forma organizada y eficiente la información relacionada con el proceso de venta de indumentaria de GV Indumentaria.
-Permite gestionar de manera precisa el stock de productos, los costos y precios de venta, así como la información de cada transacción, con el fin de establecer parámetros de compra, definir márgenes y optimizar las ventas."
+El objetivo principal de esta base de datos es estructurar de forma organizada y eficiente la información relacionada con el proceso de venta de indumentaria de GV Indumentaria.
+Permite gestionar de manera precisa el stock de productos, los costos y precios de venta, así como la información de cada transacción, con el fin de establecer parámetros de compra, definir márgenes y optimizar las ventas.
 
 ```
 
 ## Situación Problematica:
 
 ```sh
-"En el marco de su crecimiento, GV Indumentaria se enfrenta a la necesidad de optimizar la gestión de su información para responder de forma ágil y precisa a las demandas diarias del negocio.
+En el marco de su crecimiento, GV Indumentaria se enfrenta a la necesidad de optimizar la gestión de su información para responder de forma ágil y precisa a las demandas diarias del negocio.
 La empresa carece de un sistema centralizado que organice y relacione datos clave como stock, costos, precios de venta y registros de transacciones. Esta dispersión de información dificulta la consulta rápida, retrasa la toma de decisiones y puede impactar negativamente en los márgenes de ganancia.
-Contar con una base de datos sólida y bien estructurada se vuelve esencial para establecer parámetros de compra, definir márgenes óptimos y maximizar la eficiencia en el proceso de ventas."
+Contar con una base de datos sólida y bien estructurada se vuelve esencial para establecer parámetros de compra, definir márgenes óptimos y maximizar la eficiencia en el proceso de ventas.
 
 ```
 
 ## Modelo de negocio:
 
 ```sh
-"GV Indumentaria se dedica a la comercialización de prendas de vestir, enfocándose en la compra de productos terminados para su posterior venta.
+GV Indumentaria se dedica a la comercialización de prendas de vestir, enfocándose en la compra de productos terminados para su posterior venta.
 Su propuesta de valor se basa en ofrecer al cliente una variedad de prendas adaptadas a diferentes temporadas, estilos y talles, manteniendo un equilibrio entre calidad, tendencia y precio competitivo.
 El negocio genera ingresos principalmente a través de Ventas minoristas a clientes finales.
-Su rentabilidad depende de la gestión eficiente del stock, el control de costos y márgenes, y la rotación de inventario para adaptarse a la demanda del mercado y las tendencias de moda."
+Su rentabilidad depende de la gestión eficiente del stock, el control de costos y márgenes, y la rotación de inventario para adaptarse a la demanda del mercado y las tendencias de moda.
 
 ```
 
