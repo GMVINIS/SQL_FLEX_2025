@@ -235,13 +235,13 @@ Objetivo: Garantizar que no se puedan registrar ventas con cantidades superiores
 
 <br>
 
-- <a href="./base_datos.sql"> Creacion de la Base de Datos </a><br>
+- <a href="./base_datos.sql"> Creacion de la Base de Datos E inserción de datos </a><br>
 - <a href="./Final_DER.pdf"> Diagrama Entidad-Relacion </a><br>
-- <a href="./Insercion_Datos.sql"> Inserción de Datos </a><br>
-- <a href="./vistas.sql"> Vistas </a><br>
-- <a href="./funciones.sql"> Funciones </a><br>
-- <a href="./store_procedures.sql"> Store Procedures </a><br>
-- <a href="./triggers.sql"> Triggers </a><br>
+- <a href="./Vistas_final.sql"> Vistas </a><br>
+- <a href="./Funciones_final.sql"> Funciones </a><br>
+- <a href="./Store_procedures_final.sql"> Store Procedures </a><br>
+- <a href="./Triggers_final.sql"> Triggers </a><br>
+- <a href="./gv_indumentaria_back_final.sql"> Back up </a><br>
 
 ---
 

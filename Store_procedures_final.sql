@@ -1,8 +1,12 @@
+-- ENTREGA CODER HOUSE 2025- GERMAN VINISKY--
+-- OBJETIVO: CREAR UNA BASE DE DATOS RELACIONAL PARA UNA MARCA DE ROPA--
+-- CREACIÓN DE STORE PROCEDURES--
+
 USE gv_indumentaria;
 
-# Store procedure que da detalles de las ventas realizadas de  un producto en particular
+# Store procedure que da detalles de las ventas realizadas de  un producto en particular.
 
-DROP PROCEDURE sp_ventasproducto;
+DROP PROCEDURE IF EXISTS sp_ventasproducto;
 
 DELIMITER //
 CREATE PROCEDURE sp_ventasproducto(
@@ -24,9 +28,13 @@ END //
 
 DELIMITER ;
 
-# Store procedure para crear o eliminar registros de la tabla clientes
+# Caso de prueba. 
 
-DROP PROCEDURE sp_InsertarEliminarclientes;
+call gv_indumentaria.sp_ventasproducto(7);
+
+# Store procedure para crear o eliminar registros de la tabla cliente.
+
+DROP PROCEDURE IF EXISTS sp_InsertarEliminarclientes;
 
 DELIMITER //
 
@@ -63,3 +71,13 @@ BEGIN
 END //
 
 DELIMITER ;
+
+# Caso de prueba.
+
+call gv_indumentaria.sp_InsertarEliminarclientes('INSERT', '39644583', 'GERMAN', 'VINISKY', 'Argetntina', 'gvinis@gmail.com', '1996-04-04');
+
+select * from cliente;
+
+call gv_indumentaria.sp_InsertarEliminarclientes('DELETE', '39644583', 'GERMAN', 'VINISKY', 'Argetntina', 'gvinis@gmail.com', '1996-04-04');
+
+select * from cliente;
