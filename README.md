@@ -134,93 +134,57 @@ Descripción: Registra las acciones realizadas sobre los clientes, incluyendo el
 
 ```sh
 Vista: vista_producto
-Objetivo: El objetivo de esta vista es centralizar en una sola consulta los datos principales de cada producto para simplificar reportes, búsquedas y listados de inventario.
+Objetivo: Centralizar en una sola consulta los datos principales de cada producto para simplificar reportes, búsquedas y listados de inventario.
 Tablas que la componen:
     Tabla producto: Contiene la información básica de los productos, como ID y nombre.
-    Tabla color: Aporta la descripción del color de cada producto.
-    Tabla talle: Permite obtener la descripción del talle asociado al producto.
     Tabla temporada: Indica la temporada a la que corresponde el producto.
     Tabla tipo_prenda: Define el tipo de prenda (ejemplo: remera, pantalón, campera).
-Columnas principales de la vista:
-    id_producto: Identificador único del producto.
-    nombre_producto: Nombre del producto.
-    descripcion_color: Color del producto.
-    descripcion_talle: Talle del producto.
-    descripcion_temporada: Temporada a la que pertenece el producto.
-    descripcion_tipo_prenda: Tipo de prenda del producto.
 
 Vista: bajo_stock
-Objetivo: El objetivo de esta vista es identificar rápidamente los productos con bajo stock para tomar decisiones de reposición o ajuste en las ventas.
+Objetivo: Identificar rápidamente los productos con bajo stock para tomar decisiones de reposición o ajuste en las ventas.
 Tablas que la componen:
-    Tabla producto: Proporciona la información necesaria del producto, incluyendo el identificador, nombre y cantidad en stock.
-Columnas principales de la vista:
-    id_producto: Identificador único del producto.
-    nombre_producto: Nombre del producto.
-    stock: Cantidad disponible actualmente en inventario.
+    Tabla stock: Contiene la cantidad disponible de cada producto por talle y color.
+    Tabla producto: Proporciona información del producto.
+    Tabla talle: Permite obtener la descripción del talle.
+    Tabla color: Aporta la descripción del color.
 
 Vista: stock_valorizado
-Objetivo:El objetivo de esta vista es calcular de manera rápida la valorización del stock disponible, lo que permite tener una visión clara del capital invertido en inventario.
+Objetivo: Calcular de manera rápida la valorización del stock disponible, para tener una visión clara del capital invertido en inventario.
 Tablas que la componen:
-    Tabla producto: Proporciona el identificador, nombre y cantidad en stock de cada producto.
-    Tabla cost_producto: Contiene el costo unitario asociado a cada producto.
-Columnas principales de la vista:
-    id_producto: Identificador único del producto.
-    nombre_producto: Nombre del producto.
-    stock: Cantidad disponible actualmente en inventario.
-    costo: Costo unitario del producto.
-    total: Valor total del stock (stock × costo).
+    Tabla stock: Contiene el stock disponible de cada producto por talle y color.
+    Tabla producto: Proporciona el identificador y nombre del producto.
+    Tabla talle: Aporta la descripción del talle.
+    Tabla color: Aporta la descripción del color.
+    Tabla costo_producto: Contiene el costo unitario asociado a cada producto.
 
 Vista: venta_analisis
-Objetivo:El objetivo de esta vista es facilitar el análisis de la rentabilidad de las ventas, permitiendo calcular de forma directa los márgenes por producto y por cliente.
+Objetivo: Facilitar el análisis de la rentabilidad de las ventas, permitiendo calcular de forma directa los márgenes por producto y por cliente.
 Tablas que la componen:
-    Tabla venta: Proporciona los datos principales de la venta, como el ID de la venta, cliente y fecha.
-    Tabla detalle_venta: Permite acceder al detalle de cada venta (productos vendidos y cantidades).
-    Tabla cliente: Aporta la información del cliente (nombre y apellido).
+    Tabla venta: Datos principales de la venta (ID, cliente y fecha).
+    Tabla detalle_venta: Detalle de los productos vendidos y cantidades.
+    Tabla cliente: Información del cliente (nombre y apellido).
     Tabla precio_producto: Contiene el precio de venta de cada producto.
-    Tabla producto: Permite identificar el nombre de los productos vendidos.
-    Tabla cost_producto: Aporta el costo de cada producto para calcular el margen.
-Columnas principales de la vista:
-    id_venta: Identificador único de la venta.
-    id_cliente: Identificador del cliente que realizó la compra.
-    nombre: Nombre completo del cliente (concatenación de nombre y apellido).
-    fecha: Fecha en la que se realizó la venta.
-    cantidad: Cantidad de productos vendidos.
-    id_producto: Identificador del producto vendido.
-    nombre_producto: Nombre del producto.
-    precio: Precio de venta unitario del producto.
-    costo: Costo unitario del producto.
-    margen_total: Margen obtenido en la venta, calculado como (cantidad × (precio - costo)).
+    Tabla producto: Identificación del nombre de los productos vendidos.
+    Tabla costo_producto: Aporta el costo de cada producto para calcular el margen.
 
 Vista: venta_internacional
-Objetivo:El objetivo de esta vista es analizar el comportamiento de ventas según la nacionalidad de los clientes, identificando mercados más activos o con mayor volumen de compras.
+Objetivo: Analizar el comportamiento de ventas según la nacionalidad de los clientes, identificando mercados más activos o con mayor volumen de compras.
 Tablas que la componen:
-    Tabla cliente: Proporciona la nacionalidad de los clientes que realizaron compras.
-    Tabla venta: Aporta la información de las ventas, permitiendo contabilizarlas por cliente.
-Columnas principales de la vista:
-    nacionalidad: Nacionalidad del cliente.
-    ventas: Cantidad total de ventas realizadas por clientes de esa nacionalidad.
+    Tabla cliente: Proporciona la nacionalidad de los clientes.
+    Tabla venta: Contabiliza las ventas por cliente.
 
 Vista: variedad_productos
-Objetivo:El objetivo de esta vista es analizar la variedad de productos que ofrece la empresa, permitiendo identificar combinaciones de tipo de prenda y talle que cuentan con mayor o menor cantidad de stock.
+Objetivo: Analizar la variedad de productos que ofrece la empresa, identificando combinaciones de tipo de prenda y temporada con mayor o menor cantidad de productos.
 Tablas que la componen:
     Tabla producto: Contiene la información base de cada producto.
-    Tabla tipo_prenda: Aporta la descripción del tipo de prenda (remera, pantalón, campera, etc.).
-    Tabla talle: Proporciona la descripción de los talles disponibles.
-Columnas principales de la vista:
-    descripcion_tipo_prenda: Tipo de prenda.
-    descripcion_talle: Talle del producto.
-    cantidad: Número total de productos para esa combinación de prenda y talle.
+    Tabla tipo_prenda: Aporta la descripción del tipo de prenda.
+    Tabla temporada: Aporta la descripción de la temporada.
 
 Vista: detalle_venta_check
-Objetivo:El objetivo de esta vista es identificar ventas incompletas o inconsistentes para poder corregirlas o completarlas antes de generar reportes o análisis financieros.
+Objetivo: Identificar ventas incompletas o inconsistentes para poder corregirlas antes de generar reportes o análisis financieros.
 Tablas que la componen:
-    Tabla venta: Contiene la información principal de las ventas, incluyendo ID de venta, cliente y fecha.
+    Tabla venta: Contiene la información principal de las ventas (ID, cliente y fecha).
     Tabla detalle_venta: Aporta los detalles de los productos vendidos; se utiliza aquí para detectar ventas sin detalle asociado.
-Columnas principales de la vista:
-    id_venta: Identificador único de la venta.
-    id_cliente: Identificador del cliente que realizó la venta.
-    fecha: Fecha en la que se realizó la venta.
-    id_detalle: Identificador del detalle de venta (en esta vista será NULL para ventas sin detalle).
 ```
 ### Listado de las funciones
 
