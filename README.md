@@ -61,43 +61,52 @@ Tabla: tipo_prenda
 Clave primaria: id_tipo_prenda
 Claves foráneas: ninguna
 Descripción: Identifica de manera única cada tipo de prenda ( Superiores, Inferiores, Accesorios, etc), garantizando la unicidad de los registros y facilitando la clasificación de los productos.
+
 Tabla: temporada
 Clave primaria: id_temporada
 Claves foráneas: ninguna
 Descripción: Diferencia de forma única cada temporada ( Primavera/verano, Otoño/Invierno), permitiendo organizar los productos según la época del año.
+
 Tabla: color
 Clave primaria: id_color
 Claves foráneas: ninguna
 Descripción: Permite asignar un color específico a los productos de forma única, facilitando la referencia en inventario, ventas y reportes.
+
 Tabla: talle
 Clave primaria: id_talle
 Claves foráneas: ninguna
 Descripción: Distingue cada talla (S, M, L, XL, etc.) de manera única, asegurando que los productos puedan ser identificados correctamente según su tamaño.
+
 Tabla: producto
 Clave primaria: id_producto
 Claves foráneas:
 id_tipo_prenda → tipo_prenda(id_tipo_prenda)
 id_temporada → temporada(id_temporada)
 Descripción: Registra cada producto del catálogo de forma única con su nombre, tipo de prenda y temporada. Las claves foráneas aseguran que cada producto esté correctamente clasificado según su tipo y temporada.
+
 Tabla: cliente
 Clave primaria: id_cliente
 Claves foráneas: ninguna
 Descripción: Diferencia cada cliente de forma única y almacena su información personal y de contacto, asegurando que el historial de compras se vincule correctamente a la persona.
+
 Tabla: precio_producto
 Clave primaria: id_precio
 Claves foráneas:
 id_producto → producto(id_producto)
 Descripción: Guarda los distintos precios históricos de cada producto, incluyendo la moneda. La relación con la tabla producto asegura que cada precio corresponda a un producto válido.
+
 Tabla: costo_producto
 Clave primaria: id_costo
 Claves foráneas:
 id_producto → producto(id_producto)
 Descripción: Registra los costos de adquisición de cada producto a lo largo del tiempo, permitiendo calcular márgenes y rentabilidad.
+
 Tabla: venta
 Clave primaria: id_venta
 Claves foráneas:
 id_cliente → cliente(id_cliente)
 Descripción: Identifica cada venta de manera única, registrando la fecha y el cliente asociado. Facilita el seguimiento de transacciones y la gestión de historial de compras.
+
 Tabla: detalle_venta
 Clave primaria: id_detalle
 Claves foráneas:
@@ -106,6 +115,7 @@ id_producto → producto(id_producto)
 id_talle → talle(id_talle)
 id_color → color(id_color)
 Descripción: Registra cada línea de productos dentro de una venta, incluyendo la cantidad, talle y color del producto. Las claves foráneas vinculan cada detalle con la venta correspondiente y con los atributos del producto vendido.
+
 Tabla: stock
 Clave primaria: id_stock
 Claves foráneas:
@@ -113,6 +123,11 @@ id_producto → producto(id_producto)
 id_talle → talle(id_talle)
 id_color → color(id_color)
 Descripción: Mantiene la cantidad disponible de cada producto según su talla y color, permitiendo controlar el inventario y validar la disponibilidad antes de generar ventas.
+
+Tabla: log_cliente
+Clave primaria: id
+Claves foráneas: ninguna
+Descripción: Registra las acciones realizadas sobre los clientes, incluyendo el usuario que realizó la operación, la fecha, la hora y una descripción de la acción. Permite auditar cambios, eliminaciones o actualizaciones en la información de los clientes, asegurando trazabilidad y control sobre las modificaciones.
 
 ```
 ### Listado de las vistas
