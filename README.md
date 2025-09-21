@@ -236,7 +236,7 @@ Objetivo: Garantizar que no se puedan registrar ventas con cantidades superiores
 <br>
 
 - <a href="./base_datos.sql"> Creacion de la Base de Datos </a><br>
-- <a href="./ER_Diagrama.pdf"> Diagrama Entidad-Relacion </a><br>
+- <a href="./Final_DER.pdf"> Diagrama Entidad-Relacion </a><br>
 - <a href="./Insercion_Datos.sql"> Inserción de Datos </a><br>
 - <a href="./vistas.sql"> Vistas </a><br>
 - <a href="./funciones.sql"> Funciones </a><br>
